@@ -4,7 +4,21 @@
 
 <br/>
 
-**Software Developer · Web · Mobile**
+<h1 align="center" style="font-size: 55px; font-family: 'Poppins', sans-serif; font-weight: 900;">
+  <span style="color:#FF5DA2;">Software</span>
+  <span style="color:#7C5CFF;">Developer</span>
+</h1>
+
+<p align="center" style="font-size: 26px; font-family: 'Poppins', sans-serif;">
+  <span style="color:#FFB84D;">Software</span> •
+  <span style="color:#00C2A8;">Developer</span> •
+  <span style="color:#4D96FF;">Web</span> •
+  <span style="color:#FF6B6B;">Mobile</span>
+</p>
+
+<p align="center" style="font-size: 20px; color: #FFFFFF;">
+  Building things with code, curiosity, and a little creativity.
+</p>
 
 Building things with code, curiosity, and a little creativity.
 
