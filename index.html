@@ -1,143 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salma Portfolio - Mobile App Developer & Graphic Designer</title>
-  <style>
-    /* ======== Reset ======== */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salma — Creative Developer & Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;1,800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Poppins',sans-serif;background:#FFF8F0;color:#1A1A1A;overflow-x:hidden}
 
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
+  /* شريط ألوان فوق */
+  .color-bar{display:flex;height:10px}
+  .color-bar div{flex:1}
+  .b1{background:#FF6B9D}.b2{background:#FFB84D}.b3{background:#00C2A8}.b4{background:#7C5CFF}.b5{background:#FF6B6B}
 
-    a { text-decoration: none; }
+  header{padding:70px 20px 40px;text-align:center;position:relative}
+  .hello{
+    display:inline-block;background:#1A1A1A;color:#fff;
+    padding:8px 22px;border-radius:50px;font-size:15px;letter-spacing:3px;
+    transform:rotate(-3deg);margin-bottom:20px;
+  }
+  header h1{
+    font-family:'Playfair Display',serif;
+    font-size:110px;line-height:0.9;font-weight:800;letter-spacing:-2px;
+  }
+  /* اسمك بألوان فنية متناسقة */
+  .s1{color:#FF6B9D}.s2{color:#FFB84D}.s3{color:#00C2A8}.s4{color:#7C5CFF}.s5{color:#FF6B6B}
+  .subtitle{font-size:22px;margin-top:18px;font-weight:300;color:#555}
+  .subtitle b{font-weight:700}
+  .tag1{color:#FF6B9D}.tag2{color:#7C5CFF}.tag3{color:#00A896}
 
-    /* ======== Header ======== */
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 50px 20px;
-      background-color: #222;
-    }
+  /* دواير ملونة كأنها باليتة فنان */
+  .palette{display:flex;justify-content:center;gap:12px;margin:30px 0}
+  .dot{width:42px;height:42px;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:.3s}
+  .dot:hover{transform:scale(1.25) rotate(10deg)}
+  .d1{background:#FF6B9D}.d2{background:#FFB84D}.d3{background:#00C2A8}.d4{background:#7C5CFF}.d5{background:#1A1A1A}
 
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
+  .btn{
+    display:inline-block;margin-top:10px;background:#1A1A1A;color:#fff;
+    padding:16px 38px;border-radius:50px;font-weight:600;font-size:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15)
+  }
+  .btn span{color:#FFB84D}
 
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
+  /* اقسام */
+  section{max-width:900px;margin:45px auto;padding:50px 35px;border-radius:30px}
+  section h2{font-family:'Playfair Display',serif;font-size:48px;margin-bottom:18px}
+  section p{font-size:19px;line-height:1.8;color:#444;font-weight:300}
 
-    header p {
-      font-size: 1.2em;
-      color: #aaa;
-      margin-bottom: 20px;
-    }
+  #about{background:#FFE9F0;border:1px solid #FFD0DE}
+  #about h2{color:#D6336C}
+  #about h2 i{color:#FFB84D;font-style:italic}
 
-    .btn {
-      padding: 10px 20px;
-      background: linear-gradient(90deg, #00f0ff, #ff00d4);
-      color: white;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+  #projects{background:#EDE9FF;border:1px solid #D5CCFF}
+  #projects h2{color:#5B3DF0}
+  .card{
+    background:#fff;padding:28px;border-radius:20px;margin-top:20px;
+    display:flex;justify-content:space-between;align-items:center;
+    box-shadow:0 8px 20px rgba(124,92,255,.12)
+  }
+  .card h3{font-size:24px;color:#1A1A1A}
+  .card p{font-size:16px;color:#777}
+  .badge{background:#FFB84D;color:#fff;padding:8px 16px;border-radius:50px;font-size:13px;font-weight:700}
 
-    .btn:hover {
-      opacity: 0.8;
-    }
+  #contact{background:#D9F5EF;border:1px solid #A8E6D8;text-align:center}
+  #contact h2{color:#00796B}
+  #contact p{font-size:20px;margin:8px 0}
+  #contact a{color:#1A1A1A;font-weight:600;border-bottom:3px solid #FF6B9D;text-decoration:none}
 
-    /* ======== Sections ======== */
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2em;
-      color: #00f0ff;
-    }
-
-    section p {
-      text-align: center;
-      font-size: 1.1em;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    .projects .project {
-      background-color: #222;
-      margin: 20px 0;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    }
-
-    .projects .project h3 {
-      color: #ff00d4;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: #111;
-      color: #888;
-    }
-  </style>
+  footer{text-align:center;padding:35px;color:#999;font-size:14px;letter-spacing:2px}
+  footer span{color:#FF6B9D}
+</style>
 </head>
 <body>
 
-  <!-- ======== Header ======== -->
-  <header>
-    <img src="logo.png" alt="Salma Logo">
-    <h1>Salma</h1>
-    <p>Mobile App Developer & Graphic Designer</p>
-    <a href="#contact" class="btn">Contact Me</a>
-  </header>
+<div class="color-bar"><div class="b1"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div><div class="b5"></div></div>
 
-  <!-- ======== About Me ======== -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I'm Salma, a passionate mobile app developer and graphic designer. I love creating beautiful and functional apps for both Android and iOS, blending creativity and technology to deliver amazing user experiences. I'm always learning and exploring new tools to make my designs stand out.
-    </p>
-  </section>
+<header>
+  <div class="hello">✦ HELLO, I'M AN ARTIST IN CODE ✦</div>
+  <h1><span class="s1">S</span><span class="s2">a</span><span class="s3">l</span><span class="s4">m</span><span class="s5">a</span></h1>
+  <p class="subtitle">I design with <b class="tag1">color</b>, build with <b class="tag2">code</b> & create with <b class="tag3">soul</b>.</p>
 
-  <!-- ======== Projects ======== -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Coming Soon</h3>
-      <p>My projects will appear here soon. Stay tuned!</p>
-    </div>
-  </section>
+  <div class="palette">
+    <div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div><div class="dot d4"></div><div class="dot d5"></div>
+  </div>
 
-  <!-- ======== Contact ======== -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your-email@example.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com" target="_blank">linkedin.com/in/salma</a></p>
-    <p>GitHub: <a href="https://github.com" target="_blank">github.com/salma</a></p>
-  </section>
+  <a href="#contact" class="btn">Let's Create Together <span>→</span></a>
+</header>
 
-  <footer>
-    &copy; 2026 Salma. All Rights Reserved.
-  </footer>
+<section id="about">
+  <h2>About <i>Me.</i></h2>
+  <p>I'm Salma — a mobile app developer & graphic designer. I don't just make apps, I paint experiences. Every color I choose has a story, every layout has a feeling. I mix technology with art to make something people remember.</p>
+</section>
+
+<section id="projects">
+  <h2>Selected Work.</h2>
+  <div class="card">
+    <div><h3>My Next Masterpiece</h3><p>Coming soon — stay tuned for colors.</p></div>
+    <span class="badge">SOON</span>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let's Talk.</h2>
+  <p><a href="mailto:ms.salma.ali.w@gmail.com">ms.salma.ali.w@gmail.com</a></p>
+  <p><a href="https://www.linkedin.com/in/salma-ali" target="_blank">LinkedIn / Salma Ali</a></p>
+  <p><a href="https://github.com/sa36018090-arch" target="_blank">GitHub / sa36018090-arch</a></p>
+</section>
+
+<footer>MADE WITH <span>♥</span> & COLORS BY SALMA © 2026</footer>
 
 </body>
 </html>
